@@ -1,135 +1,87 @@
-# Smart Home Project
+# Smart Home Website
 
-Projekt inteligentnego domu z integracją Sanity CMS, Next.js, TypeScript, Tailwind CSS i Framer Motion.
+Nowoczesna strona internetowa dla systemu inteligentnego domu zbudowana z Next.js 14, React, TypeScript, Tailwind CSS i Sanity CMS.
 
-## Funkcje
+## 🚀 Funkcje
 
-- 🏠 Responsywny design
-- 🎨 Animacje Framer Motion
-- 📱 Integracja z Sanity CMS
-- 🌙 Ciemny motyw
-- 📧 Formularz kontaktowy
-- 🛍️ Strona produktów z modalami
+- **Responsywny design** - Dostosowany do wszystkich urządzeń
+- **Sanity CMS** - Łatwe zarządzanie treścią
+- **Animacje** - Płynne animacje i efekty wizualne
+- **SEO** - Zoptymalizowane dla wyszukiwarek
+- **TypeScript** - Bezpieczny kod z typowaniem
+- **Kontakt** - Dedykowana strona kontaktowa z formularzem
 
-## Animacje tła w HeroSection
+## 🛠️ Technologie
 
-Projekt zawiera trzy typy animacji tła dla sekcji hero:
+- **Frontend:** Next.js 14, React, TypeScript, Tailwind CSS
+- **CMS:** Sanity
+- **Hosting:** Vercel
+- **Styling:** CSS Modules, FontAwesome
 
-### 1. Animacja ikonek smart home (aktualnie aktywna)
+## 📦 Instalacja
 
-- WiFi, żarówka, tarcza bezpieczeństwa
-- Termostat, zamek, kamera
-- Głośnik, telefon, wtyczka
-- Dom, sensor, TV
-- Każda ikona ma unikalną animację (skalowanie, obrót, ruch)
+1. Sklonuj repozytorium:
+   \`\`\`bash
+   git clone https://github.com/jakpal97/SmartHome.git
+   cd SmartHome
+   \`\`\`
 
-### 2. Animacja świetlna (alternatywa)
+2. Zainstaluj zależności:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-- Promienie światła
-- Świetlne punkty/gwiazdy
-- Efekty blasku
-- Poziome i pionowe promienie
+3. Utwórz plik \`.env.local\` i skonfiguruj Sanity:
+   \`\`\`env
+   NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+   NEXT_PUBLIC_SANITY_DATASET=production
+   NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
+   SANITY_API_READ_TOKEN=your_read_token
+   \`\`\`
 
-### 3. Animacja kulek (alternatywa)
+4. Uruchom serwer deweloperski:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-- Animowane kulki w różnych rozmiarach
-- Efekty skalowania i przezroczystości
+## 🔧 Konfiguracja Sanity
 
-### Jak przełączać między animacjami:
+1. Uruchom Sanity Studio:
+   \`\`\`bash
+   npm run sanity
+   \`\`\`
 
-W pliku `components/sections/HeroSection.tsx`:
+2. Przejdź do \`http://localhost:3333\` i skonfiguruj treść
 
-```typescript
-// Dla animacji ikonek smart home (aktualnie aktywne):
-import SmartHomeIconsAnimation from '@/components/ui/SmartHomeIconsAnimation'
-// import LightAnimation from '@/components/ui/LightAnimation'
-// import CircleAnimation from '@/components/ui/CircleAnimation'
+## 🚀 Deployment
 
-// W komponencie:
-<SmartHomeIconsAnimation />
+### Vercel
 
-// Dla animacji świetlnej:
-// import SmartHomeIconsAnimation from '@/components/ui/SmartHomeIconsAnimation'
-import LightAnimation from '@/components/ui/LightAnimation'
-// import CircleAnimation from '@/components/ui/CircleAnimation'
+1. Połącz repozytorium z Vercel
+2. Dodaj zmienne środowiskowe w Vercel Dashboard
+3. Deploy automatycznie uruchomi się
 
-// W komponencie:
-<LightAnimation />
+### Sanity Production
 
-// Dla animacji kulek:
-// import SmartHomeIconsAnimation from '@/components/ui/SmartHomeIconsAnimation'
-// import LightAnimation from '@/components/ui/LightAnimation'
-import CircleAnimation from '@/components/ui/CircleAnimation'
+1. Utwórz projekt produkcyjny w Sanity
+2. Zaktualizuj zmienne środowiskowe
+3. Zaimportuj schemat danych
 
-// W komponencie:
-<CircleAnimation />
-```
+## 📱 Strony
 
-## Instalacja
+- \`/\` - Strona główna
+- \`/kontakt\` - Strona kontaktowa
+- \`/produkty\` - Strona produktów
+- \`/studio\` - Sanity Studio
 
-```bash
-npm install
-npm run dev
-```
+## 🤝 Współpraca
 
-## Struktura projektu
+1. Fork repozytorium
+2. Utwórz branch (\`git checkout -b feature/nazwa-funkcji\`)
+3. Commit zmian (\`git commit -am 'Dodaj nową funkcję'\`)
+4. Push do brancha (\`git push origin feature/nazwa-funkcji\`)
+5. Utwórz Pull Request
 
-```
-├── app/                    # Next.js App Router
-├── components/            # Komponenty React
-│   ├── sections/         # Sekcje strony
-│   └── ui/              # Komponenty UI
-├── sanity/               # Konfiguracja Sanity
-├── types/                # Typy TypeScript
-└── public/              # Pliki statyczne
-```
+## 📄 Licencja
 
-## Technologie
-
-- **Next.js 15** - Framework React
-- **TypeScript** - Typowanie statyczne
-- **Tailwind CSS v4** - Style CSS
-- **Framer Motion** - Animacje
-- **Sanity CMS** - System zarządzania treścią
-- **Vercel** - Hosting
-
-## Deployment
-
-Projekt jest gotowy do wdrożenia na Vercel. Wystarczy połączyć repozytorium z Vercel i skonfigurować zmienne środowiskowe Sanity.
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
