@@ -12,9 +12,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-	title: 'NexusHomes | Smart Living Redefined',
+	title: 'Synetiq | Nowa definicja inteligentnego życia',
 	description:
-		'Experience the future of home automation with NexusHomes. Control, monitor, and optimize your living space with our cutting-edge smart home solutions.',
+		'Doświadcz przyszłości automatyki domowej z Synetiq. Kontroluj, monitoruj i optymalizuj swoją przestrzeń życiową dzięki naszym nowoczesnym rozwiązaniom smart home.',
 }
 
 export default function RootLayout({

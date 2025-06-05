@@ -4,9 +4,9 @@ const Footer = () => {
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
 					<div>
-						<h4 className="text-lg font-semibold mb-4 text-primary-dark">NexusHomes</h4>
+						<h4 className="text-lg font-semibold mb-4 text-primary-dark">Synetiq</h4>
 						<p className="text-secondary-dark">
-							Making homes smarter, safer, and more efficient through innovative technology.
+						Sprawiamy, że domy stają się inteligentniejsze, bezpieczniejsze i bardziej energooszczędne dzięki innowacyjnej technologii.
 						</p>
 						<div className="flex space-x-4 mt-4">
 							<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
@@ -24,7 +24,7 @@ const Footer = () => {
 						</div>
 					</div>
 					<div>
-						<h4 className="text-lg font-semibold mb-4 text-primary-dark">Products</h4>
+						<h4 className="text-lg font-semibold mb-4 text-primary-dark">Produkty</h4>
 						<ul className="space-y-2">
 							<li>
 								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
