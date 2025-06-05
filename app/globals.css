@@ -1,6 +1,44 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Smooth scroll for entire page */
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px; /* Account for fixed header */
+}
+
+/* Additional smooth scrolling enhancements */
+* {
+	scroll-behavior: smooth;
+}
+
+/* Enhanced smooth scrolling with easing */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	/* Smooth transitions for all scrollable elements */
+	body,
+	section,
+	div {
+		transition: scroll 0.3s ease-in-out;
+	}
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
 :root {
 	--background: #ffffff;
 	--foreground: #171717;

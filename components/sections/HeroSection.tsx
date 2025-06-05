@@ -17,13 +17,6 @@ const HeroSection = ({ hero }: HeroSectionProps) => {
 	// Debug log - usuń po sprawdzeniu
 	console.log('HeroSection received data:', hero)
 
-	const scrollToSection = (href: string) => {
-		const element = document.querySelector(href)
-		if (element) {
-			element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-		}
-	}
-
 	// Default hero data if none from Sanity
 	const defaultHero = {
 		title: 'Smart Living',
@@ -78,22 +71,22 @@ const HeroSection = ({ hero }: HeroSectionProps) => {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.8 }}>
-							<motion.button
-								onClick={() => scrollToSection('#products')}
-								className="bg-blue-500 px-8 py-3 font-medium rounded-lg inline-flex items-center gap-2"
+							<motion.a
+								href="#products"
+								className="bg-blue-500 px-8 py-3 font-medium rounded-lg inline-flex items-center gap-2 text-white hover:bg-blue-600 transition-colors"
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}>
 								{displayHero.primaryButtonText}
 								<i className="fas fa-arrow-right"></i>
-							</motion.button>
-							<motion.button
-								onClick={() => scrollToSection('#features')}
-								className="btn-secondary-dark px-8 py-3 font-medium rounded-lg inline-flex items-center gap-2"
+							</motion.a>
+							<motion.a
+								href="#features"
+								className="btn-secondary-dark px-8 py-3 font-medium rounded-lg inline-flex items-center gap-2 hover:bg-gray-700 transition-colors"
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}>
 								{displayHero.secondaryButtonText}
 								<i className="fas fa-play"></i>
-							</motion.button>
+							</motion.a>
 						</motion.div>
 					</motion.div>
 
@@ -131,13 +124,13 @@ const HeroSection = ({ hero }: HeroSectionProps) => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1, delay: 1 }}>
-				<motion.button
-					onClick={() => scrollToSection('#features')}
+				<motion.a
+					href="#features"
 					className="text-primary-dark hover:text-accent-dark transition-colors duration-300"
 					animate={{ y: [0, 10, 0] }}
 					transition={{ duration: 2, repeat: Infinity }}>
 					<i className="fas fa-chevron-down text-2xl"></i>
-				</motion.button>
+				</motion.a>
 			</motion.div>
 		</section>
 	)
