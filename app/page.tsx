@@ -12,14 +12,17 @@ import ScrollToSection from '@/components/ScrollToSection'
 
 import Footer from '@/components/sections/Footer'
 
+// Revalidate data every 60 seconds
+export const revalidate = 60
+
 async function getPageData() {
 	try {
 		const [hero, features, products, testimonials, stats] = await Promise.all([
-			client.fetch<Hero>(heroQuery),
-			client.fetch<Feature[]>(featuresQuery),
-			client.fetch<Product[]>(productsQuery),
-			client.fetch<Testimonial[]>(testimonialsQuery),
-			client.fetch<Stats>(statsQuery),
+			client.fetch<Hero>(heroQuery, {}, { cache: 'no-store' }),
+			client.fetch<Feature[]>(featuresQuery, {}, { cache: 'no-store' }),
+			client.fetch<Product[]>(productsQuery, {}, { cache: 'no-store' }),
+			client.fetch<Testimonial[]>(testimonialsQuery, {}, { cache: 'no-store' }),
+			client.fetch<Stats>(statsQuery, {}, { cache: 'no-store' }),
 		])
 
 		console.log('Fetched data from Sanity:')

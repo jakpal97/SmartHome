@@ -14,6 +14,9 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ hero }: HeroSectionProps) => {
+	// Debug log - usuń po sprawdzeniu
+	console.log('HeroSection received data:', hero)
+
 	const scrollToSection = (href: string) => {
 		const element = document.querySelector(href)
 		if (element) {
