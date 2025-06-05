@@ -1,3 +1,102 @@
+# Smart Home Project
+
+Projekt inteligentnego domu z integracją Sanity CMS, Next.js, TypeScript, Tailwind CSS i Framer Motion.
+
+## Funkcje
+
+- 🏠 Responsywny design
+- 🎨 Animacje Framer Motion
+- 📱 Integracja z Sanity CMS
+- 🌙 Ciemny motyw
+- 📧 Formularz kontaktowy
+- 🛍️ Strona produktów z modalami
+
+## Animacje tła w HeroSection
+
+Projekt zawiera trzy typy animacji tła dla sekcji hero:
+
+### 1. Animacja ikonek smart home (aktualnie aktywna)
+
+- WiFi, żarówka, tarcza bezpieczeństwa
+- Termostat, zamek, kamera
+- Głośnik, telefon, wtyczka
+- Dom, sensor, TV
+- Każda ikona ma unikalną animację (skalowanie, obrót, ruch)
+
+### 2. Animacja świetlna (alternatywa)
+
+- Promienie światła
+- Świetlne punkty/gwiazdy
+- Efekty blasku
+- Poziome i pionowe promienie
+
+### 3. Animacja kulek (alternatywa)
+
+- Animowane kulki w różnych rozmiarach
+- Efekty skalowania i przezroczystości
+
+### Jak przełączać między animacjami:
+
+W pliku `components/sections/HeroSection.tsx`:
+
+```typescript
+// Dla animacji ikonek smart home (aktualnie aktywne):
+import SmartHomeIconsAnimation from '@/components/ui/SmartHomeIconsAnimation'
+// import LightAnimation from '@/components/ui/LightAnimation'
+// import CircleAnimation from '@/components/ui/CircleAnimation'
+
+// W komponencie:
+<SmartHomeIconsAnimation />
+
+// Dla animacji świetlnej:
+// import SmartHomeIconsAnimation from '@/components/ui/SmartHomeIconsAnimation'
+import LightAnimation from '@/components/ui/LightAnimation'
+// import CircleAnimation from '@/components/ui/CircleAnimation'
+
+// W komponencie:
+<LightAnimation />
+
+// Dla animacji kulek:
+// import SmartHomeIconsAnimation from '@/components/ui/SmartHomeIconsAnimation'
+// import LightAnimation from '@/components/ui/LightAnimation'
+import CircleAnimation from '@/components/ui/CircleAnimation'
+
+// W komponencie:
+<CircleAnimation />
+```
+
+## Instalacja
+
+```bash
+npm install
+npm run dev
+```
+
+## Struktura projektu
+
+```
+├── app/                    # Next.js App Router
+├── components/            # Komponenty React
+│   ├── sections/         # Sekcje strony
+│   └── ui/              # Komponenty UI
+├── sanity/               # Konfiguracja Sanity
+├── types/                # Typy TypeScript
+└── public/              # Pliki statyczne
+```
+
+## Technologie
+
+- **Next.js 15** - Framework React
+- **TypeScript** - Typowanie statyczne
+- **Tailwind CSS v4** - Style CSS
+- **Framer Motion** - Animacje
+- **Sanity CMS** - System zarządzania treścią
+- **Vercel** - Hosting
+
+## Deployment
+
+Projekt jest gotowy do wdrożenia na Vercel. Wystarczy połączyć repozytorium z Vercel i skonfigurować zmienne środowiskowe Sanity.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
