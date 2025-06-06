@@ -14,7 +14,7 @@ const Navigation = () => {
 	const navLinks = [
 		{ href: '/', label: 'Home', isExternal: true },
 		{ href: '#features', label: 'Funkcje', isExternal: false },
-		{ href: '/produkty', label: 'Produkty', isExternal: true },
+		{ href: '/uslugi', label: 'Usługi', isExternal: true },
 		{ href: '#testimonials', label: 'Opinie', isExternal: false },
 		{ href: '/kontakt', label: 'Kontakt', isExternal: true },
 	]
