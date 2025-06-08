@@ -11,7 +11,6 @@ interface MagnetProps {
 	inactiveTransition?: string
 	wrapperClassName?: string
 	innerClassName?: string
-	[key: string]: any
 }
 
 const Magnet = ({
@@ -23,7 +22,6 @@ const Magnet = ({
 	inactiveTransition = 'transform 0.5s ease-in-out',
 	wrapperClassName = '',
 	innerClassName = '',
-	...props
 }: MagnetProps) => {
 	const [isActive, setIsActive] = useState(false)
 	const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -66,11 +64,7 @@ const Magnet = ({
 	const transitionStyle = isActive ? activeTransition : inactiveTransition
 
 	return (
-		<div
-			ref={magnetRef}
-			className={wrapperClassName}
-			style={{ position: 'relative', display: 'inline-block' }}
-			{...props}>
+		<div ref={magnetRef} className={wrapperClassName} style={{ position: 'relative', display: 'inline-block' }}>
 			<div
 				className={innerClassName}
 				style={{
