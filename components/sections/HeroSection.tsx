@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { urlFor } from '@/sanity/lib/image'
 import { Hero } from '@/types/sanity'
 import SmartHomeIconsAnimation from '@/components/ui/SmartHomeIconsAnimation'
+import Magnet from '@/components/ui/Magnet'
 // import LightAnimation from '@/components/ui/LightAnimation'
 // import CircleAnimation from '@/components/ui/CircleAnimation' // Odkomentuj, żeby wrócić do kulek
 
@@ -71,14 +72,16 @@ const HeroSection = ({ hero }: HeroSectionProps) => {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.8 }}>
-							<motion.a
-								href="#products"
-								className="bg-blue-500 px-8 py-3 font-medium rounded-lg inline-flex items-center gap-2 text-white hover:bg-blue-600 transition-colors"
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}>
-								{displayHero.primaryButtonText}
-								<i className="fas fa-arrow-right"></i>
-							</motion.a>
+							<Magnet padding={100} disabled={false} magnetStrength={2}>
+								<motion.a
+									href="#products"
+									className="bg-blue-500 px-8 py-3 font-medium rounded-lg inline-flex items-center gap-2 text-white hover:bg-blue-600 transition-colors"
+									whileHover={{ scale: 1.05 }}
+									whileTap={{ scale: 0.95 }}>
+									{displayHero.primaryButtonText}
+									<i className="fas fa-arrow-right"></i>
+								</motion.a>
+							</Magnet>
 							<motion.a
 								href="#features"
 								className="btn-secondary-dark px-8 py-3 font-medium rounded-lg inline-flex items-center gap-2 hover:bg-gray-700 transition-colors"
