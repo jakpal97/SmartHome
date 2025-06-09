@@ -8,7 +8,6 @@ interface Product {
 	_id: string
 	name: string
 	description: string
-	price: string
 	image?: {
 		asset: {
 			_ref: string
@@ -86,13 +85,6 @@ const ProductDetailsModal = ({ isOpen, onClose, product }: ProductDetailsModalPr
 									</span>
 								</div>
 							)}
-
-							{/* Price Badge */}
-							<div className="absolute top-4 right-16">
-								<span className="bg-gray-800 text-white px-4 py-2 rounded-full text-lg font-bold shadow-lg">
-									{product.price}
-								</span>
-							</div>
 						</div>
 
 						{/* Content Section */}

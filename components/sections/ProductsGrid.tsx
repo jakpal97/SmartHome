@@ -11,7 +11,6 @@ interface Product {
 	_id: string
 	name: string
 	description: string
-	price: string
 	image?: {
 		asset: {
 			_ref: string
@@ -102,12 +101,6 @@ const ProductsGrid = ({ products, title, subtitle, description }: ProductsGridPr
 									{/* </span> */}
 									{/* </div> */}
 									{/* // )} */}
-									{/* Price Badge */}
-									<div className="absolute top-4 right-4">
-										<span className="bg-white text-gray-900 px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-											{product.price}
-										</span>
-									</div>
 								</div>
 
 								{/* Product Content */}
@@ -167,24 +160,6 @@ const ProductsGrid = ({ products, title, subtitle, description }: ProductsGridPr
 							className="btn-primary-dark inline-flex items-center px-6 py-3 font-medium rounded-lg transition-colors duration-300">
 							<i className="fas fa-comments mr-2" />
 							Skontaktuj się z nami
-						</Link>
-					</motion.div>
-				)}
-
-				{/* View All Products */}
-				{products.length > 0 && (
-					<motion.div
-						className="text-center mt-12"
-						initial={{ opacity: 0, y: 30 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.3 }}
-						viewport={{ once: true }}>
-						<Link
-							href="/produkty"
-							className="btn-secondary-dark inline-flex items-center px-8 py-4 font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
-							<i className="fas fa-th-large mr-3" />
-							Zobacz wszystkie produkty
-							<i className="fas fa-arrow-right ml-3" />
 						</Link>
 					</motion.div>
 				)}

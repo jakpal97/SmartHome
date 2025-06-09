@@ -93,7 +93,6 @@ interface Product {
 	_id: string
 	name: string
 	description: string
-	price: string
 	image?: {
 		asset: {
 			_ref: string

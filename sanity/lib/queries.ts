@@ -30,7 +30,6 @@ export const productsQuery = groq`
     _id,
     name,
     description,
-    price,
     image {
       asset,
       hotspot
