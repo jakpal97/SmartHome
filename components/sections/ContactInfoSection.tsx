@@ -1,8 +1,8 @@
 interface ContactInfo {
-	office: {
-		title: string
-		address: string
-	}
+	// office: {
+	// 	title: string
+	// 	address: string
+	// }
 	phone: {
 		title: string
 		number: string
@@ -13,11 +13,11 @@ interface ContactInfo {
 		address: string
 		responseTime: string
 	}
-	liveChat: {
-		title: string
-		description: string
-		availability: string
-	}
+	// liveChat: {
+	// 	title: string
+	// 	description: string
+	// 	availability: string
+	// }
 }
 
 interface ContactInfoSectionProps {
@@ -42,7 +42,7 @@ const ContactInfoSection = ({ title, subtitle, description, contactInfo }: Conta
 
 			<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
 				{/* Office Card */}
-				<div className="contact-card bg-white p-6 rounded-lg border border-gray-200 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">
+				{/* <div className="contact-card bg-white p-6 rounded-lg border border-gray-200 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">
 					<div className="flex items-center">
 						<div className="flex-shrink-0 bg-blue-100 rounded-md p-3">
 							<i className="fas fa-map-marker-alt text-blue-600 text-xl"></i>
@@ -52,7 +52,7 @@ const ContactInfoSection = ({ title, subtitle, description, contactInfo }: Conta
 							<p className="mt-1 text-gray-500 whitespace-pre-line">{contactInfo.office.address}</p>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 				{/* Phone Card */}
 				<div className="contact-card bg-white p-6 rounded-lg border border-gray-200 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">
@@ -89,7 +89,7 @@ const ContactInfoSection = ({ title, subtitle, description, contactInfo }: Conta
 				</div>
 
 				{/* Live Chat Card */}
-				<div className="contact-card bg-white p-6 rounded-lg border border-gray-200 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">
+				{/* <div className="contact-card bg-white p-6 rounded-lg border border-gray-200 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">
 					<div className="flex items-center">
 						<div className="flex-shrink-0 bg-yellow-100 rounded-md p-3">
 							<i className="fas fa-headset text-yellow-600 text-xl"></i>
@@ -103,7 +103,7 @@ const ContactInfoSection = ({ title, subtitle, description, contactInfo }: Conta
 							</p>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)

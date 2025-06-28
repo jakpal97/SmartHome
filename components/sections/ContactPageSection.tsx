@@ -88,11 +88,11 @@ const ContactPageSection = ({ data }: ContactPageSectionProps) => {
 					</div>
 
 					<div className="mt-16">
-						<div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+						<div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8 lg:items-center">
 							{/* Contact Cards - Left Column */}
 							<div className="space-y-8">
 								{/* Office Card */}
-								<div className="contact-card p-6 rounded-lg">
+								{/* <div className="contact-card p-6 rounded-lg">
 									<div className="flex items-center">
 										<div className="flex-shrink-0 bg-blue-500/20 rounded-md p-3">
 											<i className="fas fa-map-marker-alt text-blue-400 text-xl contact-icon"></i>
@@ -102,7 +102,7 @@ const ContactPageSection = ({ data }: ContactPageSectionProps) => {
 											<p className="mt-1 text-gray-300 whitespace-pre-line">{data.contactInfo.office.address}</p>
 										</div>
 									</div>
-								</div>
+								</div> */}
 
 								{/* Phone Card */}
 								<div className="contact-card p-6 rounded-lg">
@@ -139,7 +139,7 @@ const ContactPageSection = ({ data }: ContactPageSectionProps) => {
 								</div>
 
 								{/* Live Chat Card */}
-								<div className="contact-card p-6 rounded-lg">
+								{/* <div className="contact-card p-6 rounded-lg">
 									<div className="flex items-center">
 										<div className="flex-shrink-0 bg-yellow-500/20 rounded-md p-3">
 											<i className="fas fa-headset text-yellow-400 text-xl contact-icon"></i>
@@ -153,7 +153,7 @@ const ContactPageSection = ({ data }: ContactPageSectionProps) => {
 											</p>
 										</div>
 									</div>
-								</div>
+								</div> */}
 							</div>
 
 							{/* Contact Form - Right Columns */}
@@ -166,7 +166,7 @@ const ContactPageSection = ({ data }: ContactPageSectionProps) => {
 			</div>
 
 			{/* Map Section */}
-			<MapSection title={data.mapSection.title} mapUrl={data.mapSection.mapUrl} />
+			{/* <MapSection title={data.mapSection.title} mapUrl={data.mapSection.mapUrl} /> */}
 
 			{/* FAQ Section */}
 			<FAQSection title={data.faqSection.title} subtitle={data.faqSection.subtitle} faqs={data.faqSection.faqs} />

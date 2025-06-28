@@ -130,7 +130,7 @@ export default async function ProductsPage() {
 		<div className="section-dark pt-20">
 			<main>
 				<ProductsPageHero data={pageData.heroSection} />
-				<ProductCategories categories={pageData.categories} />
+				{/* <ProductCategories categories={pageData.categories} /> */}
 				<ProductsGrid
 					products={products}
 					title={pageData.featuredProducts?.title}

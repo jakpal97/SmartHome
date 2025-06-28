@@ -157,7 +157,7 @@ const ProductsGrid = ({ products, title, subtitle, description }: ProductsGridPr
 						<p className="text-secondary-dark mb-6">Obecnie nie ma dostępnych produktów w tej kategorii.</p>
 						<Link
 							href="/kontakt"
-							className="btn-primary-dark inline-flex items-center px-6 py-3 font-medium rounded-lg transition-colors duration-300">
+							className="btn-primary-dark inline-flex items-center px-6npm py-3 font-medium rounded-lg transition-colors duration-300">
 							<i className="fas fa-comments mr-2" />
 							Skontaktuj się z nami
 						</Link>
