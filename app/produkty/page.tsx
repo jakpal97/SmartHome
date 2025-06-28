@@ -4,7 +4,7 @@ import { productsPageQuery, productsQuery } from '@/sanity/lib/queries'
 import Footer from '@/components/sections/Footer'
 import ProductsPageHero from '@/components/sections/ProductsPageHero'
 import ProductsGrid from '@/components/sections/ProductsGrid'
-import ProductCategories from '@/components/sections/ProductCategories'
+
 import ProductsCTA from '@/components/sections/ProductsCTA'
 
 export async function generateMetadata(): Promise<Metadata> {

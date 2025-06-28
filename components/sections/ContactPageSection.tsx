@@ -2,7 +2,7 @@
 
 import ContactHeroSection from './ContactHeroSection'
 import ContactFormSection from './ContactFormSection'
-import MapSection from './MapSection'
+
 import FAQSection from './FAQSection'
 
 interface ContactPageData {
