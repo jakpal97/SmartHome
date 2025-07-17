@@ -133,10 +133,10 @@ const ProductsCTA = ({ data }: ProductsCTAProps) => {
 								transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
 								viewport={{ once: true }}>
 								<motion.div
-									className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4"
+									className={`inline-flex items-center justify-center w-16 h-16 ${feature.bgColor || 'bg-white bg-opacity-20'} rounded-full mb-4`}
 									whileHover={{ scale: 1.1, rotate: 5 }}
 									transition={{ type: 'spring', stiffness: 300 }}>
-									<feature.icon className="text-white" size={24} />
+									<feature.icon className={feature.iconColor || 'text-white'} size={24} />
 								</motion.div>
 								<h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
 								<p className="text-blue-100 text-sm">{feature.description}</p>
