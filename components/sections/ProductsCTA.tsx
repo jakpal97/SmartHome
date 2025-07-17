@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { CalendarCheck, Phone, UserCheck, Clock, ShieldCheck } from 'lucide-react'
 
 interface ProductsCTAProps {
 	data?: {
@@ -82,14 +83,14 @@ const ProductsCTA = ({ data }: ProductsCTAProps) => {
 						<Link
 							href={safeData.buttonLink || '/kontakt'}
 							className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50">
-							<i className="fas fa-calendar-check mr-3"></i>
+							<CalendarCheck className="mr-3" size={20} />
 							{safeData.buttonText || 'Bezpłatna Konsultacja'}
 						</Link>
 
 						<Link
 							href="tel:+48123456789"
 							className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
-							<i className="fas fa-phone mr-3"></i>
+							<Phone className="mr-3" size={20} />
 							Zadzwoń teraz
 						</Link>
 					</motion.div>
@@ -103,17 +104,17 @@ const ProductsCTA = ({ data }: ProductsCTAProps) => {
 						viewport={{ once: true }}>
 						{[
 							{
-								icon: 'fas fa-user-tie',
+								icon: UserCheck,
 								title: 'Eksperci',
 								description: 'Doświadczony zespół specjalistów',
 							},
 							{
-								icon: 'fas fa-clock',
+								icon: Clock,
 								title: '24/7 Wsparcie',
 								description: 'Pomoc techniczna przez całą dobę',
 							},
 							{
-								icon: 'fas fa-shield-check',
+								icon: ShieldCheck,
 								title: 'Gwarancja',
 								description: 'Pełna gwarancja na wszystkie produkty',
 							},
@@ -129,7 +130,7 @@ const ProductsCTA = ({ data }: ProductsCTAProps) => {
 									className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4"
 									whileHover={{ scale: 1.1, rotate: 5 }}
 									transition={{ type: 'spring', stiffness: 300 }}>
-									<i className={`${feature.icon} text-2xl text-white`}></i>
+									<feature.icon className="text-white" size={24} />
 								</motion.div>
 								<h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
 								<p className="text-blue-100 text-sm">{feature.description}</p>

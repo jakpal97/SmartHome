@@ -76,8 +76,6 @@ const ProductDetailsModal = ({ isOpen, onClose, product }: ProductDetailsModalPr
 									<i className="fas fa-cube text-8xl text-gray-400" />
 								</div>
 							)}
-
-							
 						</div>
 
 						{/* Content Section */}
