@@ -83,14 +83,14 @@ const ProductsCTA = ({ data }: ProductsCTAProps) => {
 						<Link
 							href={safeData.buttonLink || '/kontakt'}
 							className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50">
-							<CalendarCheck className="mr-3" size={20} />
+							<CalendarCheck className="mr-3 text-black" size={20} />
 							{safeData.buttonText || 'Bezpłatna Konsultacja'}
 						</Link>
 
 						<Link
 							href="tel:+48123456789"
 							className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
-							<Phone className="mr-3" size={20} />
+							<Phone className="mr-3 text-white" size={20} />
 							Zadzwoń teraz
 						</Link>
 					</motion.div>
@@ -107,16 +107,22 @@ const ProductsCTA = ({ data }: ProductsCTAProps) => {
 								icon: UserCheck,
 								title: 'Eksperci',
 								description: 'Doświadczony zespół specjalistów',
+								bgColor: 'bg-blue-500',
+								iconColor: 'text-white',
 							},
 							{
 								icon: Clock,
 								title: '24/7 Wsparcie',
 								description: 'Pomoc techniczna przez całą dobę',
+								bgColor: 'bg-green-500',
+								iconColor: 'text-white',
 							},
 							{
 								icon: ShieldCheck,
 								title: 'Gwarancja',
 								description: 'Pełna gwarancja na wszystkie produkty',
+								bgColor: 'bg-yellow-500',
+								iconColor: 'text-white',
 							},
 						].map((feature, index) => (
 							<motion.div
