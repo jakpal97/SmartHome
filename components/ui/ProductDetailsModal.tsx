@@ -77,14 +77,7 @@ const ProductDetailsModal = ({ isOpen, onClose, product }: ProductDetailsModalPr
 								</div>
 							)}
 
-							{/* Category Badge */}
-							{product.category && (
-								<div className="absolute top-4 left-4">
-									<span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-										{product.category}
-									</span>
-								</div>
-							)}
+							
 						</div>
 
 						{/* Content Section */}
@@ -130,7 +123,7 @@ const ProductDetailsModal = ({ isOpen, onClose, product }: ProductDetailsModalPr
 							)}
 
 							{/* Product Benefits */}
-							<motion.div
+							{/* <motion.div
 								className="mb-8 bg-gray-800 rounded-lg p-6 border border-gray-700"
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
@@ -154,7 +147,7 @@ const ProductDetailsModal = ({ isOpen, onClose, product }: ProductDetailsModalPr
 										<span className="text-gray-300">Wsparcie 24/7</span>
 									</div>
 								</div>
-							</motion.div>
+							</motion.div> */}
 
 							{/* Action Buttons */}
 							<motion.div
