@@ -24,95 +24,36 @@ const Footer = () => {
 						</div>
 					</div>
 					<div>
-						<h4 className="text-lg font-semibold mb-4 text-primary-dark">Produkty</h4>
+						
 						<ul className="space-y-2">
 							<li>
 								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Smart Hubs
+									Home
 								</a>
 							</li>
 							<li>
 								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Security
+									Funkcje
 								</a>
 							</li>
 							<li>
 								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Climate Control
+								Usługi
 								</a>
 							</li>
 							<li>
 								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Lighting
+								Opinie
 								</a>
 							</li>
 							<li>
 								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Entertainment
+								Kontakt
 								</a>
 							</li>
 						</ul>
 					</div>
-					<div>
-						<h4 className="text-lg font-semibold mb-4 text-primary-dark">Resources</h4>
-						<ul className="space-y-2">
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Blog
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Guides
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Support
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									API Docs
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Community
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h4 className="text-lg font-semibold mb-4 text-primary-dark">Company</h4>
-						<ul className="space-y-2">
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									About Us
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Careers
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Press
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Partners
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-secondary-dark hover:text-primary-dark transition-colors duration-300">
-									Contact
-								</a>
-							</li>
-						</ul>
-					</div>
+					
 				</div>
 				<div className="border-t border-card-border pt-8 flex flex-col md:flex-row justify-between items-center">
 					<p className="text-secondary-dark text-sm mb-4 md:mb-0">© 2023 NexusHomes. All rights reserved.</p>

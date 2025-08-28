@@ -53,7 +53,7 @@ const ContactSection = () => {
 								</div>
 								<div className="ml-3">
 									<p className="text-secondary-dark">Phone</p>
-									<p className="text-lg font-medium text-primary-dark">+48 555 555 555</p>
+									<p className="text-lg font-medium text-primary-dark">+48 731 385 479</p>
 								</div>
 							</div>
 							<div className="flex items-start">
@@ -62,18 +62,10 @@ const ContactSection = () => {
 								</div>
 								<div className="ml-3">
 									<p className="text-secondary-dark">Email</p>
-									<p className="text-lg font-medium text-primary-dark">hello@nexushomes.com</p>
+									<p className="text-lg font-medium text-primary-dark">biuro@synetiq.pl</p>
 								</div>
 							</div>
-							<div className="flex items-start">
-								<div className="flex-shrink-0">
-									<i className="fas fa-map-marker-alt text-blue-500 text-xl"></i>
-								</div>
-								<div className="ml-3">
-									<p className="text-secondary-dark">Adress</p>
-									<p className="text-lg font-medium text-primary-dark">ul. Sezamowa 13, Tychy</p>
-								</div>
-							</div>
+							
 						</div>
 					</div>
 					<div className="card-dark rounded-xl p-8">
