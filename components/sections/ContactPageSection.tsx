@@ -3,62 +3,38 @@
 import ContactHeroSection from './ContactHeroSection'
 import ContactFormSection from './ContactFormSection'
 
-import FAQSection from './FAQSection'
-
-interface ContactPageData {
-	title: string
+// Dane kontaktowe - zapisane bezpośrednio w komponencie
+const contactData = {
 	heroSection: {
-		title: string
-		subtitle?: string
-		description?: string
-	}
+		title: 'Skontaktuj się z nami',
+		subtitle: 'Jak możemy pomóc?',
+		description:
+			'Niezależnie od tego, czy masz pytania, czy po prostu chcesz się przywitać, nasz zespół jest gotowy do pomocy.',
+	},
 	contactInfo: {
-		title?: string
-		subtitle?: string
-		description?: string
-		office: {
-			title: string
-			address: string
-		}
+		title: 'Jak możemy pomóc?',
+		subtitle: 'Skontaktuj się z nami',
+		description:
+			'Niezależnie od tego, czy masz pytania, czy po prostu chcesz się przywitać, nasz zespół jest gotowy do pomocy.',
 		phone: {
-			title: string
-			number: string
-			hours: string
-		}
+			title: 'Telefon',
+			number: '+48 731 385 479',
+			hours: 'Pon-Pt, 9:00-17:00',
+		},
 		email: {
-			title: string
-			address: string
-			responseTime: string
-		}
-		liveChat: {
-			title: string
-			description: string
-			availability: string
-		}
-	}
+			title: 'Email',
+			address: 'biuro@synetiq.pl',
+			responseTime: 'Odpowiadamy w ciągu 24h',
+		},
+	},
 	contactForm: {
-		title?: string
-		departments?: string[]
-	}
-	mapSection: {
-		title?: string
-		mapUrl?: string
-	}
-	faqSection: {
-		title?: string
-		subtitle?: string
-		faqs: Array<{
-			question: string
-			answer: string
-		}>
-	}
+		title: 'Wyślij nam wiadomość',
+		departments: ['Sprzedaż', 'Wsparcie techniczne', 'Rozliczenia', 'Inne'],
+	},
 }
 
-interface ContactPageSectionProps {
-	data: ContactPageData
-}
-
-const ContactPageSection = ({ data }: ContactPageSectionProps) => {
+const ContactPageSection = () => {
+	const data = contactData
 	return (
 		<div className="min-h-screen">
 			{/* Hero Section */}
@@ -167,9 +143,6 @@ const ContactPageSection = ({ data }: ContactPageSectionProps) => {
 
 			{/* Map Section */}
 			{/* <MapSection title={data.mapSection.title} mapUrl={data.mapSection.mapUrl} /> */}
-
-			{/* FAQ Section */}
-			<FAQSection title={data.faqSection.title} subtitle={data.faqSection.subtitle} faqs={data.faqSection.faqs} />
 		</div>
 	)
 }
