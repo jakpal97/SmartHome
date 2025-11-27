@@ -10,6 +10,11 @@ const ContactSection = () => {
 		phone: '',
 		message: '',
 	})
+	const [isSubmitting, setIsSubmitting] = useState(false)
+	const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({
+		type: null,
+		message: '',
+	})
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target
@@ -17,18 +22,63 @@ const ContactSection = () => {
 			...prev,
 			[name]: value,
 		}))
+		// Reset status przy zmianie pola
+		if (submitStatus.type) {
+			setSubmitStatus({ type: null, message: '' })
+		}
 	}
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
-		// Here you would normally send the form data to your server
-		alert('Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.')
-		setFormData({
-			name: '',
-			email: '',
-			phone: '',
-			message: '',
-		})
+		setIsSubmitting(true)
+		setSubmitStatus({ type: null, message: '' })
+
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					...formData,
+					formType: 'main',
+				}),
+			})
+
+			const data = await response.json()
+
+			if (!response.ok) {
+				throw new Error(data.error || 'Wystąpił błąd podczas wysyłania wiadomości.')
+			}
+
+			setSubmitStatus({
+				type: 'success',
+				message: 'Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.',
+			})
+
+			// Reset formularza po sukcesie
+			setFormData({
+				name: '',
+				email: '',
+				phone: '',
+				message: '',
+			})
+
+			// Automatyczne ukrycie komunikatu sukcesu po 5 sekundach
+			setTimeout(() => {
+				setSubmitStatus({ type: null, message: '' })
+			}, 5000)
+		} catch (error) {
+			setSubmitStatus({
+				type: 'error',
+				message:
+					error instanceof Error
+						? error.message
+						: 'Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.',
+			})
+		} finally {
+			setIsSubmitting(false)
+		}
 	}
 
 	return (
@@ -39,7 +89,7 @@ const ContactSection = () => {
 						Gotowy <span className="text-blue-500">na transoformację</span> Swojego domu?
 					</h2>
 					<p className="text-lg text-secondary-dark max-w-2xl mx-auto">
-					Jesteśmy tutaj, aby pomóc i odpowiedzieć na wszelkie pytania. Czekamy na kontakt z Tobą.
+						Jesteśmy tutaj, aby pomóc i odpowiedzieć na wszelkie pytania. Czekamy na kontakt z Tobą.
 					</p>
 				</div>
 
@@ -64,7 +114,6 @@ const ContactSection = () => {
 									<p className="text-lg font-medium text-primary-dark">biuro@synetiq.pl</p>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 					<div className="card-dark rounded-xl p-8">
@@ -129,10 +178,48 @@ const ContactSection = () => {
 									required
 								/>
 							</div>
+							{submitStatus.type && (
+								<div
+									className={`p-4 rounded-lg mb-4 ${
+										submitStatus.type === 'success'
+											? 'bg-green-500/20 text-green-400 border border-green-500/30'
+											: 'bg-red-500/20 text-red-400 border border-red-500/30'
+									}`}>
+									{submitStatus.message}
+								</div>
+							)}
 							<button
 								type="submit"
-								className="bg-blue-500 cursor-pointer w-full px-6 py-3 font-medium rounded-lg transition duration-300">
-								Wyślij wiadomość
+								disabled={isSubmitting}
+								className={`bg-blue-500 w-full px-6 py-3 font-medium rounded-lg transition duration-300 ${
+									isSubmitting
+										? 'opacity-50 cursor-not-allowed'
+										: 'cursor-pointer hover:bg-blue-600 transform hover:scale-105'
+								}`}>
+								{isSubmitting ? (
+									<span className="flex items-center justify-center">
+										<svg
+											className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24">
+											<circle
+												className="opacity-25"
+												cx="12"
+												cy="12"
+												r="10"
+												stroke="currentColor"
+												strokeWidth="4"></circle>
+											<path
+												className="opacity-75"
+												fill="currentColor"
+												d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+										</svg>
+										Wysyłanie...
+									</span>
+								) : (
+									'Wyślij wiadomość'
+								)}
 							</button>
 						</form>
 						<div className="text-center mt-4">

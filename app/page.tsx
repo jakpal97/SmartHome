@@ -5,7 +5,7 @@ import { Hero, Feature, Product, Testimonial, Stats } from '@/types/sanity'
 import HeroSection from '@/components/sections/HeroSection'
 import FeaturesSection from '@/components/sections/FeaturesSection'
 import ProductsSection from '@/components/sections/ProductsSection'
-import TestimonialsSection from '@/components/sections/TestimonialsSection'
+
 import StatsSection from '@/components/sections/StatsSection'
 import ContactSection from '@/components/sections/ContactSection'
 import ScrollToSection from '@/components/ScrollToSection'
@@ -46,7 +46,7 @@ async function getPageData() {
 }
 
 export default async function Home() {
-	const { hero, features, products, testimonials, stats } = await getPageData()
+	const { hero, features, products, stats } = await getPageData()
 
 	return (
 		<div className="min-h-screen">
@@ -55,7 +55,7 @@ export default async function Home() {
 				<HeroSection hero={hero} />
 				<FeaturesSection features={features} />
 				<ProductsSection products={products} />
-				<TestimonialsSection testimonials={testimonials} />
+				{/* <TestimonialsSection testimonials={testimonials} /> */}
 				<StatsSection stats={stats} />
 				<ContactSection />
 				<Footer />
