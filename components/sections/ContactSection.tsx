@@ -39,8 +39,7 @@ const ContactSection = () => {
 						Gotowy <span className="text-blue-500">na transoformację</span> Swojego domu?
 					</h2>
 					<p className="text-lg text-secondary-dark max-w-2xl mx-auto">
-						Contact our smart home specialists today to schedule a free consultation. We&apos;ll assess your needs and
-						create a customized solution for your home.
+					Jesteśmy tutaj, aby pomóc i odpowiedzieć na wszelkie pytania. Czekamy na kontakt z Tobą.
 					</p>
 				</div>
 
@@ -52,7 +51,7 @@ const ContactSection = () => {
 									<i className="fas fa-phone-alt text-blue-500 text-xl"></i>
 								</div>
 								<div className="ml-3">
-									<p className="text-secondary-dark">Phone</p>
+									<p className="text-secondary-dark">Telefon</p>
 									<p className="text-lg font-medium text-primary-dark">+48 731 385 479</p>
 								</div>
 							</div>
